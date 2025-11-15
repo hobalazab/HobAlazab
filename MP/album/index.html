@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Swiper Card Slider with Music Player</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
+<link rel='stylesheet' href='../../dic/bootstrap/bootstrap.css'>
+<link rel="stylesheet" href="../../dic/swiper/swiper.css">
+<link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+
+  <body>
+    <div class="container">
+   <div class="main">
+  <div class="content mx-auto">
+    <div class="slider-playlist row g-3">
+      <!-- Slider -->
+      <div class="swiper col-lg-5 col-md-6 col-12 mx-auto">
+        <div class="swiper-wrapper" id="swiperWrapper">
+          <!-- Swiper slides here -->
+        </div>
+      </div>
+
+      <!-- Playlist -->
+      <div class="playlist col-lg-7 col-md-6 col-12 mx-auto">
+        <div class="playlist-scroll" id="playlistScroll">
+          <!-- Playlist items here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Player -->
+    <div class="player mt-3 mt-lg-4 mx-auto w-100">
+      <audio id="audioPlayer" src="" type="audio/mpeg"></audio>
+
+      <div class="progress-container d-flex justify-content-between align-items-center mb-2">
+        <span id="currentTime">0:00</span>
+        <input type="range" value="0" id="progress-bar" step="0.1" class="flex-grow-1 mx-2">
+        <span id="duration">0:00</span>
+      </div>
+
+      <div class="controls d-flex justify-content-center align-items-center gap-3 gap-md-4">
+        <i class="fa-solid fa-download download-btn" title="دانلود"></i>
+        <i class="fa-solid fa-shuffle" id="shuffleBtn" title="حالت پخش"></i>
+        <i class="fa-solid fa-backward" id="prevBtn"></i>
+        <button id="playPauseBtn" class="btn btn-light d-flex align-items-center justify-content-center">
+          <i class="fa-solid fa-play" id="playPauseIcon"></i>
+        </button>
+        <i class="fa-solid fa-forward" id="nextBtn"></i>
+        <i class="fa-regular fa-heart like-btn"></i>
+        <i class="fa-regular fa-floppy-disk save-btn" title="ذخیره"></i>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+  </body>
+    <script src='../../dic/bootstrap/bootstrap.js'></script>
+    <script src="../../dic/swiper/swiper.js"></script>
+    <script  src="script.js"></script>
+
+  
+</html>

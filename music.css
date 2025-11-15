@@ -362,9 +362,9 @@
   color: #ffffff;
 }
 .track-list {
-  border: solid 1px #ffffff85;
-  backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+background: rgb(74 6 171 / 17%);
   max-height: 60vh;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -387,6 +387,7 @@
   /* اطمینان از اینکه هیچ والد دیگری اسکرول را مسدود نمی‌کند */
   .song-container,
   .recommended-songs {
+   
     color: #ffffff;
     overflow: visible !important;
     position: relative !important;
