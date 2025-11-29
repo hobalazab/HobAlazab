@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="music.css">
 <link rel="stylesheet" href="style.css">
   </head>
-    
+      <body>
    <header class="header" id="header">
             <nav class="nav px-3">
                 <a href="#" class="nav__logo">Marlon</a>
@@ -53,7 +53,7 @@
                 <img src="assets/img/perfil.png" alt="" class="nav__img">
             </nav>
         </header>
-  <body>
+
  <div class="container-fluid px-3 mt-5">
   <div class="row gx-4">
            
@@ -371,9 +371,70 @@
 
 
 
+  <!-- 🔍 جستجو تمام‌صفحه -->
+<!-- 🔍 پنجره جستجو -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box d-flex align-items-center">
+    <input type="text" id="searchInput" class="form-control flex-grow-1" placeholder="اسم آهنگ">
+    <button class="btn btn-search ms-2">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </div>
+</div>
 
 
 
+
+
+
+<div id="categoryOverlay" class="category-overlay">
+  <div class="overlay-header d-flex justify-content-between align-items-center">
+    <h2 class="text-white">دسته بندی‌ها</h2>
+    <button class="btn btn-close text-white" id="closeCategory">&times;</button>
+  </div>
+  
+  <div class="category-grid">
+    <!-- کارت نمونه با ویدیو -->
+    <div class="category-card">
+      <video autoplay muted loop class="w-100 h-100 object-fit-cover">
+        <source src="videos/animation.mp4" type="video/mp4">
+      </video>
+       <div class="category-button">
+    <button class="btn btn-glass">
+      <i class="fa-solid fa-circle-play"></i> پارتی استارتر
+    </button>
+  </div>
+    </div>
+
+    <!-- کارت نمونه با عکس -->
+    <div class="category-card">
+      <img src="https://wallpapercat.com/w/full/2/5/f/158856-3840x2160-desktop-4k-walle-wallpaper-photo.jpg" alt="">
+     <div class="category-button">
+    <button class="btn btn-glass">
+      <i class="fa-solid fa-circle-play"></i> پارتی استارتر
+    </button>
+  </div>
+    </div>
+
+    <div class="category-card">
+      <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/ab52d9d0-308e-43e0-a577-dce35fedd2a3" alt="">
+        <div class="category-button">
+    <button class="btn btn-glass">
+      <i class="fa-solid fa-circle-play"></i> پارتی استارتر
+    </button>
+  </div>
+    </div>
+
+    <div class="category-card">
+      <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/20c8fdd5-9f4a-4917-ae90-0239a52e8334" alt="">
+       <div class="category-button">
+    <button class="btn btn-glass">
+      <i class="fa-solid fa-circle-play"></i> پارتی استارتر
+    </button>
+  </div>
+    </div>
+  </div>
+</div>
 
 
    </div>
@@ -396,16 +457,8 @@
   </div>
 </footer>
 
-  <!-- 🔍 جستجو تمام‌صفحه -->
-<!-- 🔍 پنجره جستجو -->
-<div class="search-overlay" id="searchOverlay">
-  <div class="search-box d-flex align-items-center">
-    <input type="text" id="searchInput" class="form-control flex-grow-1" placeholder="جستجو کنید...">
-    <button class="btn btn-search ms-2">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
-  </div>
-</div>
+
+
 
 
   </body>

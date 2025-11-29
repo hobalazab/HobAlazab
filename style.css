@@ -1142,17 +1142,19 @@ footer.footer {
 
 /* ورودی */
 #searchInput {
+  text-decoration: ltr;
   border: none;
   outline: none;
   background: transparent;
   font-size: 1.1rem;
-  color: #333;
+  color: #ffffff;
       border: none;
     box-shadow: none;
 }
 
 #searchInput::placeholder {
-  color: #777;
+  color: #c7c7c7;
+  text-align: right;
 }
 
 /* دکمه ذره‌بین */
@@ -1183,4 +1185,98 @@ footer.footer {
 }
 .textweb{
   text-align: center;
+}
+ 
+ .category-overlay {
+
+    overflow-y: auto; /* فقط overlay scrollable باشه */
+  -webkit-overflow-scrolling: touch; /* smooth scroll در iOS */
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(15px);
+  z-index: 1050;
+  display: none; /* اول مخفی */
+  flex-direction: column;
+  padding: 2rem;
+
+  transition: opacity 0.3s ease;
+}
+
+/* هدر Overlay */
+.overlay-header {
+  margin-bottom: 2rem;
+}
+
+/* شبکه کارت‌ها */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+/* کارت هر دسته */
+.category-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0,255,255,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0,255,255,0.6);
+}
+
+/* متن روی کارت */
+.category-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #00ffff;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+/* ویدیو و عکس */
+.category-card video,
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* دکمه شیشه‌ای روی کارت */
+.category-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 2;
+}
+
+.btn-glass {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 255, 255, 0.2);
+  border: 1px solid rgba(0,255,255,0.5);
+  color: #00ffff;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  text-shadow: 0 0 5px #00ffff;
+  transition: all 0.3s ease;
+}
+
+.btn-glass:hover {
+  background: rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 15px #00ffff;
+  transform: scale(1.05);
+}
+
+.btn-glass i {
+  font-size: 1.2rem;
 }

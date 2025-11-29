@@ -106,3 +106,52 @@ document.querySelector('.btn-search')?.addEventListener('click', (e) => {
     
   }
 });
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("input", () => {
+  const value = searchInput.value;
+  
+  // اگر اولین کاراکتر فارسی بود، راست‌چین کن
+  if (/^[\u0600-\u06FF]/.test(value)) {
+    searchInput.style.direction = "rtl";
+    searchInput.style.textAlign = "right";
+  } else {
+    searchInput.style.direction = "ltr";
+    searchInput.style.textAlign = "left";
+  }
+});
+const categoryBtn = document.querySelector('.nav__item a[href="#contactme"]');
+const categoryOverlay = document.getElementById('categoryOverlay');
+const closeCategory = document.getElementById('closeCategory');
+
+categoryBtn.addEventListener('click', e => {
+  e.preventDefault();
+  categoryOverlay.style.display = 'flex';
+});
+
+closeCategory.addEventListener('click', () => {
+  categoryOverlay.style.display = 'none';
+});
+categoryBtn.addEventListener('click', e => {
+  e.preventDefault();
+  categoryOverlay.style.display = 'flex';
+  document.body.style.overflow = 'hidden'; // غیر فعال کردن scroll صفحه
+});
+
+closeCategory.addEventListener('click', () => {
+  categoryOverlay.style.display = 'none';
+  document.body.style.overflow = ''; // فعال کردن دوباره scroll صفحه
+});
+categoryBtn.addEventListener('click', e => {
+  e.preventDefault();
+  categoryOverlay.style.display = 'flex';
+  // غیر فعال کردن اسکرول کل صفحه
+  document.body.style.position = 'fixed';
+  document.body.style.width = '100%';
+});
+
+closeCategory.addEventListener('click', () => {
+  categoryOverlay.style.display = 'none';
+  // بازگردانی اسکرول صفحه
+  document.body.style.position = '';
+});
